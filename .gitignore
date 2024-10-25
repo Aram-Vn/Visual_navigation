@@ -1,0 +1,13 @@
+.cache/
+.vscode/
+venv/
+.venv/
+compile_commands.json
+build/
+os
+plt
+sys
+subprocess
+src/OpticalFlow
+OpticalFlow
+a.cpp
