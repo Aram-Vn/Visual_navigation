@@ -71,14 +71,14 @@ namespace utilities {
 
     //*************************** PointUtils ***************************//
 
-    std::vector<cv::Point2f> PointUtils::filterPointsNearCenter(const std::vector<cv::Point2f>& points,
+    std::vector<cv::Point2f> PointUtils::filterPointsNearCenter(const std::vector<cv::Point2f>& m_points,
                                                                 const cv::Size& frameSize, float maxDistance)
     {
         std::vector<cv::Point2f> filteredPoints;
         cv::Point2f              center(frameSize.width / 2.0f,
                                         frameSize.height / 2.0f); // Center of the frame
 
-        for (const auto& point : points)
+        for (const auto& point : m_points)
         {
             float distance = cv::norm(point - center);
 

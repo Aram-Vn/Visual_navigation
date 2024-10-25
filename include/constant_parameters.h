@@ -6,14 +6,21 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/video/tracking.hpp>
 
-namespace droneMockData {
+struct droneMockData
+{
+    float altitude; // meters
+    float pitch;    // degrees
+    float yaw;      // degrees
+    float roll;     // degrees
 
-    constexpr float Altitude = 0.5f; // meter
-    constexpr float pitch    = 0.0f; // degrees
-    constexpr float yaw      = 0.0f; // degrees
-    constexpr float roll     = 0.0f; // degrees
-
-} // namespace droneMockData
+    droneMockData(float alt = 150.0f, float p = 0.0f, float y = 0.0f, float r = 0.0f)
+        : altitude(alt),
+          pitch(p),
+          yaw(y),
+          roll(r)
+    {
+    }
+};
 
 namespace CameraParameters {
 

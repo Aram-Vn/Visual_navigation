@@ -25,7 +25,7 @@ namespace utilities {
     class PointUtils
     {
     public:
-        static std::vector<cv::Point2f> filterPointsNearCenter(const std::vector<cv::Point2f>& points,
+        static std::vector<cv::Point2f> filterPointsNearCenter(const std::vector<cv::Point2f>& m_points,
                                                                const cv::Size& frameSize, float maxDistance);
     };
 } // namespace utilities

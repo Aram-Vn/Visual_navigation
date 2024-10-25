@@ -18,24 +18,26 @@ namespace Air {
     class VideoProcessor
     {
     public:
-        explicit VideoProcessor(const std::string& filePath);
-        VideoProcessor(int cameraID);
+        explicit VideoProcessor(const std::string& filePath, float altitude = 150.0);
+        VideoProcessor(int cameraID = 0);
         ~VideoProcessor();
 
     public:
-        void processFrames();
+        void processFrames(void);
         void displayResults(const cv::Mat& frame);
 
     private:
-        cv::VideoCapture         cap;
-        cv::Mat                  prevFrame;
-        cv::Mat                  currFrame;
-        std::vector<cv::Point2f> points[2];
-        float                    total_X;
-        float                    total_Y;
-        double                   yavRes;
-        double                   abs_total_X;
-        double                   abs_total_y;
+        cv::VideoCapture         m_cap;
+        cv::Mat                  m_prev_frame;
+        cv::Mat                  m_curr_frame;
+        std::vector<cv::Point2f> m_points[2];
+        float                    m_total_X;
+        float                    m_total_Y;
+        double                   m_yav_res;
+        double                   m_abs_total_X;
+        double                   m_abs_total_Y;
+        const float              m_displacementThreshold;
+        droneMockData            m_drone_mock_data;
     };
 } // namespace Air
 
