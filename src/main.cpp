@@ -1,4 +1,5 @@
 #include "../include/VideoProcessor.h"
+
 #include <chrono>
 #include <cstddef>
 #include <cstdint>
@@ -16,7 +17,6 @@ int main()
 
     for (std::size_t i = 0; i < file_options.size(); ++i)
     {
-        // Use std::filesystem to get the filename
         std::cout << i << ": " << std::filesystem::path(file_options[i]).filename() << std::endl;
     }
 

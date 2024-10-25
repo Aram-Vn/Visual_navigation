@@ -2,6 +2,7 @@
 #define AIRDEV_VISUAL_NAVIGATION_INCLUDE_VIDEO_PROCESSOR_H
 
 #include "constant_parameters.h"
+#include "utilities.h"
 
 #include <algorithm>
 #include <cmath>
